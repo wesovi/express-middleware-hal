@@ -27,7 +27,7 @@ Above we can find an example of how we can build the body response
 
 
 ## Links
-
+- **Documentation** [github.com](http://www.wesovi.com/express-middleware-hypermedia/)
 - **Build status** [travis-ci.org](https://travis-ci.org/wesovi/express-middleware-hypermedia/builds)]
 - **Source code** [github.com](https://github.com/wesovi/express-middleware-hypermedia.git)]
 - **Bugs** [github.com](https://github.com/wesovi/express-middleware-hypermedia/issues)]
