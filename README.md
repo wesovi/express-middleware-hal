@@ -2,7 +2,7 @@
 
 Express middleware which allows you implement  hypermedia REST api easily
 
-[![Build Status](https://secure.travis-ci.org/lloydwatkin/express-middleware-readme.md.png)](http://travis-ci.org/lloydwatkin/express-middleware-readme.md)
+[![Build Status](https://travis-ci.org/wesovi/express-middleware-hypermedia/builds)](https://travis-ci.org/wesovi/express-middleware-hypermedia/builds)
 
 ## Usage 
 
