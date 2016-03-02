@@ -1,4 +1,4 @@
-# express-middleware-readme.md
+# express-middleware-hypermedia
 
 Express middleware which allows you implement  hypermedia REST api easily
 
@@ -9,46 +9,29 @@ Express middleware which allows you implement  hypermedia REST api easily
 ### Default Options 
 
 ```javaScript
-app.use(require('express-middleware-readme.md').run)
+    var obj = {
+        name:'Aldi',
+        nationality:'German',
+        offices:145,
+        owner:'John O\'Melavo'
+    };
+
+    var halResponse = new HalResponse(obj)
+        .withLink(new Link().from("products","show products","/shops/1/products"))
+        .withLink(new Link().from("employees","show employees","/shops/1/employees"))
+        .withLink(new SelfLink().from("shop","/shops/1"));
+
+    hal.bind(res,halResponse)();
 ```
 
-This will expose your README.md at the the path '/readme.md'.
-
-### Set options
-
-```javaScript
-var readme = require('express-middleware-readme.md')
-readme.setOptions({
-    endpoint: [ '/readme.md', '/README.html' ],
-    htmlWrap: {
-        scripts: '/js/main.js',
-        styles: '/css/style.css',
-        meta: [
-            { charset: 'utf-8' }
-        ],
-        title: 'This is my github README.md'
-    }
-})
-app.use(readme.run)
-```
-
-Notes: 
-
-* Each of 'endpoint', 'scripts', and 'styles' can be string values or arrays
-* An empty object as 'htmlWrap' results in just doctype, html, head, and body tags added
-* 'meta' can be made up of 'content', 'charset', 'http-equiv', and 'name' attributes
-* 'filename' is the location of your README.md relative to project root (defaults to ./README.md)
-* 'endpoint' defaults to '/readme.html'
+Above we can find an example of how we can build the body response
 
 ## License
 
-Apache 2.0, please let me know if this doesn't suit :-)
+Apache 2.0
 
 ## To-do
 
-Add tests, all code is crap without.
 
-This will be a good little project for me to translate my unit testing skills over to node.js/javascript.
+This will be a good little project for me to start coding some utilities in node.js/javascript.
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lloydwatkin/express-middleware-readme.md/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
