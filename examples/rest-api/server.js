@@ -13,9 +13,6 @@ var port = process.env.PORT || 8080;        // set our port
 var router = express.Router();              // get an instance of the express Router
 
 router.get('/shops/1', function(req, res) {
-    console.log('retrieving request');
-
-
     var obj = {
         name:'Aldi',
         nationality:'German',
@@ -37,4 +34,6 @@ router.get('/shops/1', function(req, res) {
 app.use('/api/v1', router);
 
 app.listen(port);
-console.log('Magic happens on port ' + port);
+
+
+module.exports = app;

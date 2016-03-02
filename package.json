@@ -8,9 +8,14 @@
     "demo": "node examples/rest-api/server.js"
   },
   "devDependencies": {
-    "mocha": "^2.4.5",
+    "body-parser": "^1.15.0",
+    "chai": "^3.5.0",
     "express": "^4.13.4",
-    "body-parser": "^1.15.0"
+    "hippie": "^0.4.0",
+    "mocha": "^2.4.5",
+    "requirejs": "^2.1.22",
+    "should": "^8.2.2",
+    "supertest": "^1.2.0"
   },
   "repository": {
     "type": "git",
@@ -36,6 +41,8 @@
   },
   "homepage": "https://github.com/wesovi/express-middleware-hypermedia#readme",
   "dependencies": {
-
+    "chai-http": "^2.0.1",
+    "require": "^2.4.20",
+    "sinon": "^1.17.3"
   }
 }
