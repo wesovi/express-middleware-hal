@@ -1,0 +1,41 @@
+{
+  "name": "express-middleware-hypermedia",
+  "version": "0.0.1",
+  "description": "Express middleware for hypermedia api's",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "node examples/rest-api/server.js"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "express": "^4.13.4",
+    "body-parser": "^1.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesovi/express-middleware-hypermedia.git"
+  },
+  "keywords": [
+    "express",
+    "middlewate",
+    "hal",
+    "rest",
+    "api"
+  ],
+  "author": "Iván Corrales Solera <developer@wesovi.com>",
+  "contributors": [
+    {
+      "name": "Iván Corrales Solera",
+      "url": "http://www.wesovi.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wesovi/express-middleware-hypermedia/issues"
+  },
+  "homepage": "https://github.com/wesovi/express-middleware-hypermedia#readme",
+  "dependencies": {
+
+  }
+}
