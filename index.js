@@ -8,7 +8,6 @@
         function mediaType(res) {
             res.header('content-type', halMediaType);
         }
-
         mediaType(this);
         this.json(halResponse.hal());
     }

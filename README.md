@@ -31,6 +31,7 @@ Above we can find an example of how we can build the body response
 - **Build status** [travis-ci.org](https://travis-ci.org/wesovi/express-middleware-hypermedia/builds)]
 - **Source code** [github.com](https://github.com/wesovi/express-middleware-hypermedia.git)]
 - **Bugs** [github.com](https://github.com/wesovi/express-middleware-hypermedia/issues)]
+- **npmjs** [npmnjs.org](https://www.npmjs.com/package/express-middleware-hypermedia)
 
 ## License
 
