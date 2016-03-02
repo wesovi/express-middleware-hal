@@ -1,32 +1,20 @@
-'use strict'
+;;(function(exports) {
 
-var HalResponse = require('./lib/hal').HalResponse;
-var Link = require('./lib/link').Link;
-var SelfLink = require('./lib/link').SelfLink;
+    "use strict"
 
+    var halMediaType = 'application/hal+json';
 
-exports = module.exports = function(body,links){
+    exports.middleware = function (halResponse) {
+        function mediaType(res) {
+            res.header('content-type', halMediaType);
+        }
 
-    var halMediaType= 'application/hal+json';
-
-
-    function addHeader(res){
-        res.header('content-type',halMediaType);
+        mediaType(this);
+        this.json(halResponse.hal());
     }
 
-    function buildJson(body){
-        var response = new HalResponse(body);
-        response
-            .withLink(new Link().from("other","demo","/person/1"))
-            .withLink(new Link().from("people","next","/person/2"))
-            .withLink(new SelfLink().from("next","/person/2"))
-        return response;
-    }
+    exports.HalResponse = require('./lib/hal').HalResponse;
+    exports.Link = require('./lib/link').Link;
+    exports.SelfLink = require('./lib/link').SelfLink;
 
-    addHeader(this);
-    var response = buildJson(buildJson(body));
-    this.json(response);
-
-}
-
-
+})(this);
