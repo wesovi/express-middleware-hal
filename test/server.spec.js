@@ -1,11 +1,6 @@
-/**
- * Created by Ivan on 2/3/16.
- */
-
 var supertest = require("supertest");
 var should = require("should");
 
-// This agent refers to PORT where program is runninng.
 var app = require('../examples/rest-api/server');
 
 describe('Testing with the response is empty', function() {

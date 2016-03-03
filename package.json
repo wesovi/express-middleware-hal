@@ -1,13 +1,17 @@
 {
   "name": "express-middleware-hypermedia",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Express middleware for hypermedia api's",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "demo": "node examples/rest-api/server.js"
+    "demo": "node examples/rest-api/server.js",
+    "eslint": "eslint index.js lib"
   },
   "devDependencies": {
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2",
+    "eslint-plugin-flow-vars": "^0.2.1",
     "express": "^4.13.4",
     "mocha": "^2.4.5",
     "should": "^8.2.2",
@@ -37,8 +41,6 @@
   },
   "homepage": "https://github.com/wesovi/express-middleware-hypermedia#readme",
   "dependencies": {
-    "chai-http": "^2.0.1",
-    "require": "^2.4.20",
-    "sinon": "^1.17.3"
+
   }
 }
